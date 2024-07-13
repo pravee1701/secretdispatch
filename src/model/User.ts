@@ -43,7 +43,7 @@ const UserSchema: Schema<User> = new Schema({
     },
     password: {
         type: String,
-        required: [true, "Password is required"],
+        required: [false, "password is required"],
     },
     verifyCode: {
         type: String,
