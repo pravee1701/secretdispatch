@@ -64,7 +64,7 @@ const page = () => {
                 title: 'Success',
                 description: response.data.message
             })
-            router.replace(`/verify-code/${username}`)
+            router.replace(`/verify/${username}`)
             setIsSubmitting(false)
         } catch (error) {
             const axiosError = error as AxiosError<ApiResponse>
@@ -105,6 +105,7 @@ const page = () => {
                                         />
                                     </FormControl>
                                     {isCheckingUsername && <Loader2 className="animate-spin" />}
+                                    <p className={`text-sm ${usernameMessage ==="Username is unique" ?  "text-green-500" : "text-red-500"}`}>test {usernameMessage}</p>
                                     <FormMessage />
                                 </FormItem>
                             )}
