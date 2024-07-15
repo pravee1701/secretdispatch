@@ -5,7 +5,6 @@ import bcrypt from "bcryptjs";
 import { sendVerificationEmail } from "@/helpers/sendVerificationEmail";
 
 export async function POST(request: Request) {
-    console.log("reuest====>",request.body)
     await dbConnect();
 
     try {
@@ -53,7 +52,7 @@ export async function POST(request: Request) {
                 email,
                 password: hasedPassword,
                 verifyCode,
-                expiryDate,
+                verifyCodeExpiry: expiryDate,
                 isVerified: false,
                 isAcceptingMessage: true,
                 messages: [],
