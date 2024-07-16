@@ -1,9 +1,59 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Secret Dispatch
+
+Secret Dispatch is an anonymous messaging platform built with Next.js, MongoDB, Zod, Shadcn UI, and AI integration using Gemini Pro. It allows users to send messages anonymously while providing robust authentication features.
+
+## Table of Contents
+
+1. [Features](#features)
+2. [Tech Stack](#tech-stack)
+3. [Getting Started](#getting-started)
+   - [Installation](#installation)
+4. [Usage](#usage)
+5. [Authentication](#authentication)
+6. [Database](#database)
+7. [AI Integration](#ai-integration)
+8. [Deployment](#deployment)
+9. [Contributing](#contributing)
+
+
+## Features
+
+- Anonymous messaging
+- User authentication (sign up, sign in)
+- Email verification via OTP
+- AI-powered message suggestions using Gemini Pro
+- Responsive UI built with Shadcn UI
+- Form validation using Zod
+- MongoDB database integration
+
+## Tech Stack
+
+- [Next.js]- React framework for building web applications
+- [MongoDB]- NoSQL database
+- [Zod]- TypeScript-first schema validation
+- [Shadcn UI]- Re-usable components built with Radix UI and Tailwind CSS
+- [NextAuth.js]- Authentication for Next.js
+- [Gemini Pro]- AI model for message suggestions
 
 ## Getting Started
 
-First, run the development server:
 
+
+### Installation
+
+1. Clone the repository:
+```git clone https://github.com/pravee1701/secretdispatch.git```
+2. Install dependencies:
+```npm install```
+3. Set up environment variables:
+Create a `.env` file in the root directory and add the following variables:
+```MONGODB_URI="your-mongodb-url"
+NEXTAUTH_SECRET="your-nextauth-secret"
+RESEND_API_KEY="your-resend-api-key"
+GOOGLE_API_KEY="your-google-api-key"
+```
+4. Run the development server:
 ```bash
 npm run dev
 # or
@@ -14,23 +64,42 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Sign up for an account using your email
+2. Verify your email address with the OTP sent to your inbox
+3. Log in to your account
+4. Start sending anonymous messages
+5. Use the AI-powered suggestion feature to get message ideas
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Authentication
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Authentication is handled using NextAuth.js. The project uses a Credentials provider, but you can add more providers as needed.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Database
 
-## Deploy on Vercel
+MongoDB is used as the database. Ensure your connection string is correctly set in the environment variables.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## AI Integration
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Gemini Pro is used for generating message suggestions. Make sure to set up your API key in the environment variables.
+
+## Deployment
+
+1. Choose a hosting platform (e.g., Vercel, Netlify)
+2. Connect your GitHub repository
+3. Set up environment variables in the hosting platform
+4. Deploy the application
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
