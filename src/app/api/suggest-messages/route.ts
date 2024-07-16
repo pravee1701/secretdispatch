@@ -13,7 +13,7 @@ const buildGoogleGenAIPrompt = (messages: Message[]) => ({
         })),
 });
 
-export async function GET(req: Request) {
+export async function POST(req: Request) {
     try {
         interface Message {
             id: string;
