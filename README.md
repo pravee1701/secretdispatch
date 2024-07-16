@@ -43,12 +43,17 @@ Secret Dispatch is an anonymous messaging platform built with Next.js, MongoDB, 
 ### Installation
 
 1. Clone the repository:
-```git clone https://github.com/pravee1701/secretdispatch.git```
+```bash
+git clone https://github.com/pravee1701/secretdispatch.git
+```
 2. Install dependencies:
-```npm install```
+``` bash 
+npm install
+```
 3. Set up environment variables:
 Create a `.env` file in the root directory and add the following variables:
-```MONGODB_URI="your-mongodb-url"
+```bash
+MONGODB_URI="your-mongodb-url"
 NEXTAUTH_SECRET="your-nextauth-secret"
 RESEND_API_KEY="your-resend-api-key"
 GOOGLE_API_KEY="your-google-api-key"
